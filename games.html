@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Games — TeamName</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-theme="light">
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="container nav">
+      <a class="brand" href="index.html">TeamName</a>
+
+      <button class="nav-toggle" id="navToggle2" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks2">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="toggleTheme2">🌓</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <section class="games-grid-section">
+      <h1>Our Games</h1>
+      <p class="muted">Games developed collaboratively by our multidisciplinary team.</p>
+
+      <div class="games-grid">
+
+        <!-- GAME CARD 1 -->
+        <article class="game-card large glass animated">
+          <img class="thumb" src="assets/images/game1-thumb.jpg" alt="Game One Thumbnail" />
+
+          <div class="card-body">
+            <h3>Game One</h3>
+            <p class="desc">A fast-paced action game built with Unity.</p>
+
+            <ul class="features">
+              <li>Lead Developer: You</li>
+              <li>Gameplay & Animation: Ayushmaan</li>
+              <li>Environment Art: Vandit</li>
+              <li>Cybersecurity Validation: Prateek & Arighna</li>
+              <li>Hardware Insights: Zaki</li>
+            </ul>
+
+            <div class="card-actions">
+              <a class="btn" href="https://github.com/USERNAME/REPO/releases/download/v1.0/game.apk" target="_blank">Download APK</a>
+              <a class="btn outline" href="#" onclick="alert('WebGL not available (demo)');return false;">Play WebGL</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GAME CARD 2 -->
+        <article class="game-card large glass animated">
+          <img class="thumb" src="assets/images/game2-thumb.jpg" alt="Game Two Thumbnail" />
+
+          <div class="card-body">
+            <h3>Game Two</h3>
+            <p class="desc">A puzzle-adventure prototype created by the full team.</p>
+
+            <ul class="features">
+              <li>Core Mechanics: You & Ayushmaan</li>
+              <li>Art & Environments: Vandit</li>
+              <li>Security & Testing: Prateek & Arighna</li>
+              <li>Electrical Concepts & Logic Feedback: Zaki</li>
+            </ul>
+
+            <div class="card-actions">
+              <a class="btn" href="https://github.com/USERNAME/REPO/releases/download/v1.0/game2.apk" target="_blank">Download APK</a>
+              <a class="btn outline" href="#" onclick="alert('WebGL not available (demo)');return false;">Play WebGL</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="year2"></span> TeamName — Built by our EPICS Team
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

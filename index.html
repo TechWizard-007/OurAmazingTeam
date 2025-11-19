@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TeamName — Game Dev Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Team game development portfolio — Android games, WebGL builds, and Unity/Unreal projects." />
+</head>
+
+<body data-theme="light">
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap" id="siteHeader">
+    <nav class="container nav">
+      <a class="brand" href="index.html">TeamName</a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="toggleTheme">🌓</button>
+
+        <div class="feature-toggles">
+          <label><input type="checkbox" id="toggleAnim" checked /> Anim</label>
+          <label><input type="checkbox" id="toggleFloating" checked /> Floating Nav</label>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-inner container glass">
+
+        <div class="hero-text">
+          <h1>Hi, we're <span class="accent">TeamName</span></h1>
+
+          <p class="lead">
+            Unity & Unreal Developers • AR/VR Explorers • VRGC Members • Creative Indie Team
+          </p>
+
+          <p>
+            We build small, playable Android games and WebGL prototypes together.  
+            Our long-term vision: create meaningful, enjoyable games as an indie team.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="games.html">Explore Games</a>
+            <a class="btn outline" href="https://github.com/USERNAME/REPOSITORY/releases/download/v1.0/game.apk" target="_blank">Download APK</a>
+            <a class="btn outline" href="about.html#team">Meet the Team</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/images/hero-bg.jpg" alt="Hero Image" />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- LATEST GAMES SECTION -->
+    <section class="container latest-games">
+      <h2>Latest Releases</h2>
+
+      <div class="games-list">
+
+        <!-- GAME CARD 1 -->
+        <article class="game-card glass animated">
+          <img class="thumb" src="assets/images/game1-thumb.jpg" alt="Game Thumbnail" />
+
+          <div class="card-body">
+            <h3>Game One</h3>
+            <p class="desc">Fast-paced runner made with Unity.</p>
+
+            <p class="muted">Team: Ayushmaan (Code), Vandit (Art), Pranav (Design)</p>
+
+            <div class="card-actions">
+              <a class="btn small" href="https://github.com/USERNAME/REPO/releases/download/v1.0/game.apk" target="_blank">Download APK</a>
+              <a class="btn small outline" href="#" onclick="alert('WebGL demo not available (demo)');return false;">Play Web</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- GAME CARD 2 -->
+        <article class="game-card glass animated">
+          <img class="thumb" src="assets/images/game2-thumb.jpg" alt="Game Thumbnail" />
+
+          <div class="card-body">
+            <h3>Game Two</h3>
+            <p class="desc">Puzzle-adventure prototype built with Unity.</p>
+
+            <p class="muted">Team: Entire TeamName</p>
+
+            <div class="card-actions">
+              <a class="btn small" href="https://github.com/USERNAME/RELEASES/releases/download/v1.0/game2.apk" target="_blank">Download APK</a>
+              <a class="btn small outline" href="#" onclick="alert('WebGL demo not available (demo)');return false;">Play Web</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- QUICK FEATURES -->
+    <section class="container features">
+      <div class="grid-3">
+        <div class="feature glass">
+          <h4>Engines</h4>
+          <p>Unity • Unreal Engine</p>
+        </div>
+
+        <div class="feature glass">
+          <h4>Platforms</h4>
+          <p>Android APK • WebGL</p>
+        </div>
+
+        <div class="feature glass">
+          <h4>Tools</h4>
+          <p>GitHub • Blender • VSCode</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> TeamName • Built by the EPICS Team</div>
+
+      <div class="socials">
+        <a href="#" title="GitHub">
+          <img src="assets/icons/github.svg" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">Message Sent (demo)</div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

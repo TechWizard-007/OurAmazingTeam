@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — TeamName</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-theme="light">
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="container nav">
+      <a class="brand" href="index.html">TeamName</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="toggleTheme4">🌓</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container contact-main">
+
+    <section class="glass contact-card">
+      <h1>Contact Our Team</h1>
+      <p>Have a question, idea, or feedback? Send us a message — we’d love to hear from you.</p>
+
+      <form id="contactForm" onsubmit="return false;">
+        <label>Name
+          <input type="text" id="name" required placeholder="Your name">
+        </label>
+
+        <label>Email
+          <input type="email" id="email" required placeholder="you@example.com">
+        </label>
+
+        <label>Message
+          <textarea id="message" required placeholder="Write your message here"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn primary" id="sendBtn">Send (demo)</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year4"></span> TeamName — EPICS Team</div>
+  </footer>
+
+  <div id="toast" class="toast">Message Sent (demo)</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
