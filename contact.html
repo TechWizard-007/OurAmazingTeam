@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — TeamName</title>
+  <title>About — TeamName</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -17,49 +17,89 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="games.html">Games</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="icon-btn" id="toggleTheme4">🌓</button>
+        <button class="icon-btn" id="toggleTheme3">🌓</button>
       </div>
     </nav>
   </header>
 
+
   <!-- MAIN CONTENT -->
-  <main class="container contact-main">
+  <main class="container about-main">
 
-    <section class="glass contact-card">
-      <h1>Contact Our Team</h1>
-      <p>Have a question, idea, or feedback? Send us a message — we’d love to hear from you.</p>
+    <!-- TEAM DESCRIPTION -->
+    <section class="glass bio">
+      <div class="bio-right">
+        <h1>About Our Team</h1>
+        <p class="lead">
+          We are a multidisciplinary team from Gaming Technology, Cybersecurity, and Electrical Engineering,
+          working together to create meaningful and playable game experiences using Unity and Unreal Engine.
+        </p>
 
-      <form id="contactForm" onsubmit="return false;">
-        <label>Name
-          <input type="text" id="name" required placeholder="Your name">
-        </label>
+        <p>
+          Our strength comes from combining creativity, technical skills, system logic, visual design,
+          cybersecurity awareness, and hardware knowledge. Together, we aim to build impactful digital experiences.
+        </p>
+      </div>
+    </section>
 
-        <label>Email
-          <input type="email" id="email" required placeholder="you@example.com">
-        </label>
 
-        <label>Message
-          <textarea id="message" required placeholder="Write your message here"></textarea>
-        </label>
+    <!-- TEAM MEMBERS -->
+    <section id="team" class="glass team-section" style="margin-top:30px; padding:20px;">
+      <h2>Meet the Team</h2>
+      <p class="muted">Each member contributes a unique skill set that makes our team complete.</p>
 
-        <div class="form-actions">
-          <button class="btn primary" id="sendBtn">Send (demo)</button>
-        </div>
-      </form>
+      <div class="team-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px;">
+
+        <!-- YOU -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>You</h3>
+          <p class="muted">Lead Game Developer & Game Designer (Gaming Technology)</p>
+        </article>
+
+        <!-- AYUSHMAAN -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>Ayushmaan</h3>
+          <p class="muted">Gameplay Programmer & Technical Animator (Gaming Technology)</p>
+        </article>
+
+        <!-- VANDIT -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>Vandit</h3>
+          <p class="muted">3D Environment Artist & Level Designer (Gaming Technology)</p>
+        </article>
+
+        <!-- PRATEEK -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>Prateek</h3>
+          <p class="muted">Cybersecurity & Systems Integration Engineer (Cyber)</p>
+        </article>
+
+        <!-- ARIGHNA -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>Arighna</h3>
+          <p class="muted">Cybersecurity Analyst & QA Lead (Cyber)</p>
+        </article>
+
+        <!-- ZAKI -->
+        <article class="team-card glass" style="padding:12px;">
+          <h3>Zaki</h3>
+          <p class="muted">Hardware & Electronics Specialist (Electrical Engineering)</p>
+        </article>
+
+      </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">© <span id="year4"></span> TeamName — EPICS Team</div>
+    <div class="container">© <span id="year3"></span> TeamName — EPICS Project Team</div>
   </footer>
-
-  <div id="toast" class="toast">Message Sent (demo)</div>
 
   <script src="js/script.js"></script>
 </body>
