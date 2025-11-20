@@ -5,30 +5,32 @@
 
 /* Basic reset */
 :root{
-  --bg: #0f1724;
+  --bg: #0d1117;
   --card: rgba(255,255,255,0.06);
   --glass: rgba(255,255,255,0.06);
-  --text: #e6eef8;
-  --muted: #b9c5d6;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
   --accent: #7ce3c4;
   --primary: #6c8cff;
-  --shadow: 0 8px 24px rgba(2,6,23,0.6);
+  --shadow: 0 8px 24px rgba(0,0,0,0.45);
   --glass-border: rgba(255,255,255,0.08);
-  --glass-blur: 8px;
+  --glass-blur: 12px;
 }
 
 /* Light theme overrides */
 body[data-theme="light"]{
-  --bg: #f6f9fc;
-  --card: rgba(255,255,255,0.6);
-  --glass: rgba(255,255,255,0.7);
-  --text: #0b1220;
-  --muted: #4b5870;
+  --bg: #ffffff; /* clean and neutral */
+  --card: rgba(255,255,255,0.85);
+  --glass: rgba(255,255,255,0.65);
+  --text: #1a1a1a; /* dark grey for premium look */
+  --muted: #555866;
   --accent: #0ea5a0;
   --primary: #2563eb;
-  --shadow: 0 8px 30px rgba(16,24,40,0.08);
-  --glass-border: rgba(255,255,255,0.6);
-  --glass-blur: 6px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.12);
+  --glass-border: rgba(200,200,200,0.35);
+  --glass-blur: 10px;
+  
+  background: linear-gradient(180deg, #f2f4f7, #ffffff);
 }
 
 *{box-sizing:border-box}
@@ -36,7 +38,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg,var(--bg), #071027 80%);
+  background: linear-gradient(180deg,var(--bg), #0a0f1a 80%);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -95,7 +97,7 @@ body{
 
 /* Glass panel shared class */
 .glass{
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  background: var(--glass);
   border-radius:14px;
   padding:20px;
   border: 1px solid var(--glass-border);
@@ -108,7 +110,8 @@ body{
   display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;font-weight:600;
 }
 .btn.primary{background:linear-gradient(90deg,var(--primary),#7c9cff);color:white}
-.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text)}
+.btn.outline{background:transparent;border:1px solid rgba(0,0,0,0.15);color:var(--text)}
+body[data-theme = "dark"].btn.outline{border: 1px solid rgba(255,255,255,0.15);}
 .btn.small{padding:8px 10px;font-size:0.9rem}
 .cta-row{display:flex;gap:12px;margin-top:12px}
 

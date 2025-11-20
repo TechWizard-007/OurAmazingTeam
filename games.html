@@ -29,69 +29,105 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="container">
 
-    <section class="games-grid-section">
-      <h1>Our Games</h1>
-      <p class="muted">Games developed collaboratively by our multidisciplinary team.</p>
+    <!-- OFFLINE SECTION -->
+    <section style="margin-top:20px;">
+      <h1>Offline Games (Android APK)</h1>
+      <p class="muted">Download and play offline. Suitable for 6th–12th class students.</p>
 
       <div class="games-grid">
 
-        <!-- GAME CARD 1 -->
+        <!-- EXAMPLE APK CARD -->
         <article class="game-card large glass animated">
-          <img class="thumb" src="assets/images/game1-thumb.jpg" alt="Game One Thumbnail" />
+          <img class="thumb" src="assets/images/game1-thumb.jpg" alt="Physics Game" />
 
           <div class="card-body">
-            <h3>Game One</h3>
-            <p class="desc">A fast-paced action game built with Unity.</p>
+            <h3>Physics Simulation Game</h3>
+            <p class="desc">Basic physics concepts explained through gameplay.</p>
 
             <ul class="features">
-              <li>Lead Developer: You</li>
-              <li>Gameplay & Animation: Ayushmaan</li>
-              <li>Environment Art: Vandit</li>
-              <li>Cybersecurity Validation: Prateek & Arighna</li>
-              <li>Hardware Insights: Zaki</li>
+              <li>Easy controls for students</li>
+              <li>Fully offline</li>
+              <li>Safe download</li>
             </ul>
 
             <div class="card-actions">
-              <a class="btn" href="https://github.com/USERNAME/REPO/releases/download/v1.0/game.apk" target="_blank">Download APK</a>
-              <a class="btn outline" href="#" onclick="alert('WebGL not available (demo)');return false;">Play WebGL</a>
+              <a class="btn"
+                 href="https://github.com/USERNAME/REPO/releases/download/v1.0/physics.apk"
+                 target="_blank">Download APK</a>
             </div>
           </div>
         </article>
 
-        <!-- GAME CARD 2 -->
-        <article class="game-card large glass animated">
-          <img class="thumb" src="assets/images/game2-thumb.jpg" alt="Game Two Thumbnail" />
-
-          <div class="card-body">
-            <h3>Game Two</h3>
-            <p class="desc">A puzzle-adventure prototype created by the full team.</p>
-
-            <ul class="features">
-              <li>Core Mechanics: You & Ayushmaan</li>
-              <li>Art & Environments: Vandit</li>
-              <li>Security & Testing: Prateek & Arighna</li>
-              <li>Electrical Concepts & Logic Feedback: Zaki</li>
-            </ul>
-
-            <div class="card-actions">
-              <a class="btn" href="https://github.com/USERNAME/REPO/releases/download/v1.0/game2.apk" target="_blank">Download APK</a>
-              <a class="btn outline" href="#" onclick="alert('WebGL not available (demo)');return false;">Play WebGL</a>
-            </div>
-          </div>
-        </article>
+        <!-- ADD MORE APK GAMES BELOW THIS LINE -->
 
       </div>
-
     </section>
+
+
+    <!-- ONLINE SECTION -->
+    <section style="margin-top:40px;">
+      <h1>Online Games (Play in Browser)</h1>
+      <p class="muted">These games work on both phones and laptops. No installation needed.</p>
+
+      <div class="games-grid">
+
+        <!-- EXAMPLE WEB GAME -->
+        <article class="game-card large glass animated">
+          <img class="thumb" src="assets/images/htmlgame-thumb.jpg" alt="HTML Game" />
+
+          <div class="card-body">
+            <h3>HTML5 Dodge Game</h3>
+            <p class="desc">A simple web-based reaction game, works on all devices.</p>
+
+            <ul class="features">
+              <li>Playable on phone</li>
+              <li>Playable on PC</li>
+              <li>No lag</li>
+            </ul>
+
+            <div class="card-actions">
+              <a class="btn outline"
+                 href="https://techwizard-007.github.io/MyWebGame/index.html"
+                 target="_blank">Play Online</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EXAMPLE WEBGL GAME -->
+        <article class="game-card large glass animated">
+          <img class="thumb" src="assets/images/webgl-thumb.jpg" alt="WebGL Game" />
+
+          <div class="card-body">
+            <h3>Unity WebGL Maze</h3>
+            <p class="desc">A lightweight maze challenge built in Unity WebGL.</p>
+
+            <ul class="features">
+              <li>Phone-friendly UI</li>
+              <li>Works in browser</li>
+            </ul>
+
+            <div class="card-actions">
+              <a class="btn outline"
+                 href="https://techwizard-007.github.io/WebGLMaze/index.html"
+                 target="_blank">Play WebGL</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOR ADDING MORE WEB GAMES BELOW THIS LINE -->
+
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      © <span id="year2"></span> TeamName — Built by our EPICS Team
+      © <span id="year2"></span> TeamName — EPICS Project
     </div>
   </footer>
 
