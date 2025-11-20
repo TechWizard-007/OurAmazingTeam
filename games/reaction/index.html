@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reaction Timer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:sans-serif;text-align:center;background:#101010;color:white;}
+#box{
+  width:100%;height:80vh;background:#333;border-radius:20px;margin-top:20px;
+  display:flex;justify-content:center;align-items:center;font-size:28px;
+}
+</style>
+</head>
+<body>
+
+<h2>Reaction Timer</h2>
+<p>Tap as FAST as possible when the screen turns GREEN!</p>
+<div id="box">Wait...</div>
+
+<script>
+let box=document.getElementById("box");
+let startTime, endTime;
+
+function startGame(){
+  box.style.background="#333";
+  box.textContent="Wait...";
+  
+  let delay=Math.random()*3000+1000;
+  
+  setTimeout(()=>{
+    box.style.background="green";
+    box.textContent="TAP!";
+    startTime=Date.now();
+  },delay);
+}
+
+box.addEventListener("click",()=>{
+  if(box.style.background=="green"){
+    endTime=Date.now();
+    let rt=endTime-startTime;
+    box.textContent="Your reaction: "+rt+" ms\nTap to restart";
+    box.style.background="#444";
+    startGame();
+  }
+});
+
+startGame();
+</script>
+
+</body>
+</html>

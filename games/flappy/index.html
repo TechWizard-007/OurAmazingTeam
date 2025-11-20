@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flappy Block</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;background:#111;overflow:hidden;}
+#player{
+  width:40px;height:40px;background:#03e9f4;position:absolute;top:50%;left:50px;border-radius:6px;
+}
+.pipe{position:absolute;width:60px;background:#0f0;}
+#score{
+  position:fixed;top:10px;left:10px;font-size:24px;color:white;font-family:sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div id="player"></div>
+<div id="score">0</div>
+
+<script>
+let p=document.getElementById("player");
+let score=0,y=window.innerHeight/2,vel=0,gravity=0.4;
+
+function flap(){vel=-6;}
+document.body.onmousedown=flap;
+document.body.ontouchstart=flap;
+
+function spawnPipe(){
+  let gap=150;
+  let topHeight=Math.random()*(window.innerHeight-200);
+  let bottomHeight=window.innerHeight-topHeight-gap;
+  
+  let top=document.createElement("div");
+  top.className="pipe";
+  top.style.height=topHeight+"px";
+  top.style.left=window.innerWidth+"px";
+  document.body.appendChild(top);
+  
+  let bottom=document.createElement("div");
+  bottom.className="pipe";
+  bottom.style.height=bottomHeight+"px";
+  bottom.style.bottom="0px";
+  bottom.style.left=window.innerWidth+"px";
+  document.body.appendChild(bottom);
+
+  let move=setInterval(()=>{
+    top.style.left=top.offsetLeft-3+"px";
+    bottom.style.left=bottom.offsetLeft-3+"px";
+
+    // collision
+    if(top.offsetLeft < 90 && top.offsetLeft > 10){
+      if(p.offsetTop < topHeight || p.offsetTop > topHeight+gap){
+        alert("Game Over! Score: "+score);
+        location.reload();
+      }
+    }
+
+    if(top.offsetLeft<-80){
+      clearInterval(move);
+      top.remove();
+      bottom.remove();
+      score++;
+      document.getElementById("score").textContent=score;
+    }
+  },16);
+}
+
+setInterval(spawnPipe,1700);
+
+function loop(){
+  vel+=gravity;
+  y+=vel;
+  
+  if(y<0 || y>window.innerHeight-40){
+    alert("Game Over! Score: "+score);
+    location.reload();
+  }
+
+  p.style.top=y+"px";
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+
+</body>
+</html>
